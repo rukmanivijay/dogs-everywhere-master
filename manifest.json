@@ -1,0 +1,21 @@
+{
+  "name": "Dogs Everywhere",
+  "version": "0.1",
+  "description": "Replace every image with dog images.",
+  "manifest_version": 2,
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js":      ["assets/js/contentScript.js"]
+  }],
+  "permissions": [
+    "https://dog.ceo/api/*"
+  ],
+  "background": {
+    "scripts": ["assets/js/background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "128": "assets/images/icon128.png"
+  }
+}
